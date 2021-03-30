@@ -1,0 +1,26 @@
+<div class="container-fluid parent-container">
+  <nav class="navbar navbar-light header-row-div">
+    <a class="navbar-brand" href="#">Grocers App</a>
+  </nav>
+  <div class="row" style="height: 100%;">
+    <div class="col-2" style="background-color: #FEFFFB  ; height: 98%; width: 100%;">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="'/groc/items'">Items</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-10" style="background-color:#F3F3F3 ; height: 98%; width: 100%;">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

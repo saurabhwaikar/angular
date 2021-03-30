@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col">
+        <p>Items list</p>
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Details</th>
+                    <th scope="col">Add to Cart</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of items">
+                    <td scope="row">{{ item.itemId }}</td>
+                    <td>{{ item.itemName }}</td>
+                    <td>{{ item.itemDescription }}</td>
+                    <td><button class="button" (click)="getItemDetail(item)">Details</button></td>
+                    <td><button class="button" (click)="addItemToCart(item)">Add To Cart</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="item-details-container" *ngIf="isItemSelectedForDetails">
+            <app-item [item]="selectedItem"></app-item>           
+        </div>
+    </div>
+</div>
